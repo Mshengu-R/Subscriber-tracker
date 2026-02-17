@@ -9,7 +9,7 @@ const subscriptionSchema = new mongoose.Schema({
         required: [true, 'Subscription name is required'],
         trim: true,
         minLength: 2,
-        maxLength: 100.
+        maxLength: 100,
 
     },
 
@@ -45,13 +45,13 @@ const subscriptionSchema = new mongoose.Schema({
         // trim: true
     },
 
-    startDate: {
-        type: Date,
-        required: true,
-        validate: {
-            validator: (value)=> value < newDate(),
-            message: "Start date must be in the past",
-        }
+    // startDate: {
+    //     type: Date,
+    //     required: true,
+    //     validate: {
+    //         validator: (value)=> value < newDate(),
+    //         message: "Start date must be in the past",
+    //     }
     },
 
     startDate: {
@@ -74,7 +74,7 @@ user: {
 }, {timestamps: true});
 
 // auto calculate renewal date if missing
-subscriptionSchema.pre('save', function(next){
+subscriptionSchema.pre('save', function(next){ 
 
   if(!this.renewalDate) {
     const renewalDate = {
@@ -94,4 +94,5 @@ subscriptionSchema.pre('save', function(next){
 
     next()
   }
+
 })
