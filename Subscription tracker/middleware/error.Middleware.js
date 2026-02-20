@@ -1,0 +1,45 @@
+// global error handler
+
+const errorMiddleware = (err, req, res, next)=>{
+    
+    
+    try{
+
+        let error = { ...err};
+
+        error.message = err.message;
+
+        console.error(err);
+        
+        //Mongoose bad objectId
+        if(err.name === 'CastError' || err.name === 'castError'){
+            const message = 'resource not found';
+            error = new Error(message);
+            error.statusCode = 404;
+        }
+
+        // Mongoose duplicate key
+        if(err.name == 11000){
+            const message = 'Duplicate field value';
+            error = new Error(message);
+            error.statusCode = 400;
+        }
+
+
+        // Mongoose validation error
+        if(err.name == 'ValidationError'){
+            const message = Object.values(err.errors).map(val => val.message);
+            error = new Error(message.join(', '));
+            error.statusCode = 400;
+        }
+
+        // response from the middleware
+        res.status(error.statusCode || 500).json({succes: false, error: error.message || 'Server error'})
+
+    }catch(error){
+
+        next(error);
+    }
+};
+
+module.exports = errorMiddleware;
