@@ -34,16 +34,17 @@
 # hosting
 - VPS, e.g hostinger
 
-##
-- Api namong, user nouns in plural
+## Best uses
+- Api naming, use nouns in plural
 
-# files
+# Components
 - App.js main file for running the server
 - then middleware folder with middleware soource code for global middleware function
 - then models for creating database schema for how I want my data to be stored( looklike ) define it in an object
 - then routes for authentication, subscription, users
 - then file for connecting to the database
-
+- services for business logic
+- Arcjet for rate limitting
 
  ## Models Use schema for defining how/what our data should looklike
 - Schema objects
