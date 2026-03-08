@@ -8,6 +8,7 @@ const aj = arcjet.default({
   // variable rather than hard coding.
   key: ARCJET_KEY,
   rules: [
+
     // Shield protects your app from common attacks e.g. SQL injection
     arcjet.shield({ mode: "LIVE" }),
     // Create a bot detection rule
@@ -22,6 +23,7 @@ const aj = arcjet.default({
         //"CATEGORY:PREVIEW", // Link previews e.g. Slack, Discord
       ],
     }),
+    
     // Create a token bucket rate limit. Other algorithms are supported.
     arcjet.tokenBucket({
       mode: "LIVE",
@@ -31,6 +33,7 @@ const aj = arcjet.default({
       refillRate: 5, // Refill 5 tokens per interval
       interval: 10, // Refill every 10 seconds
       capacity: 10, // Bucket capacity of 10 tokens
+
     }),
   ],
 });

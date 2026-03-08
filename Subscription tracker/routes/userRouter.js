@@ -1,26 +1,23 @@
 const express = require('express');
-const { getUser, getUsers } = require('../controllers/user.controller');
+const { getUser, getUsers, createUser, updateUser, deleteUser } = require('../controllers/user.controller');
 const authorize = require('../middleware/auth.middleware');
 const userRouter = express.Router();
 
-// /api/v1/users
+// /api/v1/users - get all users
 userRouter.get('/', authorize,  getUsers)
 
-// /api/v1/users/:id
+// /api/v1/users/:id - get a single user by id
 userRouter.get('/:id', authorize, getUser)
 
+// /api/v1/users - create a new user
+//  no id we dont know the user
+userRouter.post('/', createUser);
 
-userRouter.post('/', (req, res)=>{
-    res.json({message: "Create new user"})
-})
+// /api/v1/users/:id/update - update user
+userRouter.put('/:id/update', authorize, updateUser);
 
-userRouter.put('/:id', (req, res)=>{
-    res.json({message: "Update user"})
-})
-
-userRouter.delete('/:id', (req, res)=>{
-    res.json({message: "Delete users"})
-})
+// /api/v1/users/:id/delete - create a new user
+userRouter.delete('/:id/delete', authorize, deleteUser)
 
 
 module.exports = userRouter;

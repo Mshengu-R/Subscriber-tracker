@@ -34,7 +34,6 @@ const errorMiddleware = (err, req, res, next)=>{
         }
 
         // response from the middleware
-        // note spelling corrected and default values preserved
         res.status(error.statusCode || 500).json({success: false, error: error.message || 'Server error'})
 
     }catch(error){

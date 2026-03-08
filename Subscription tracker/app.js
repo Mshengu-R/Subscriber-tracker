@@ -33,9 +33,9 @@ app.get('/', (req, res)=>{
 });
 
 
-app.listen(PORT, async ()=> {console.log(`Server for subscription tracker is running on port: ${PORT}`)
+app.listen(PORT, async ()=> { console.log(`Server for subscription tracker is running on port: ${PORT}`)
   
-  await connectToDatabase();
+  await connectToDatabase(); // connect to the database when the server starts, if it fails the server will not start
 
 })
 

@@ -1,25 +1,19 @@
 const express = require('express');
 const subRouter = express.Router();
+const authorize = require('../middleware/auth.middleware');
+const { createSubscription, getSubscription, updateSubscription, deleteSubscription } = require('../controllers/subscription.controller');
 
 subRouter.get('/', (req,res)=>{
              res.json({message: "Subscribe"})
 })
 
-subRouter.get('/:id', (req,res)=>{
-              res.json({message: "Get subscription details"})
-})
+subRouter.get('/user/:id', authorize, getSubscription )
 
-subRouter.post('/', (req,res)=>{
-             res.json({message: "Create subscription"})
-})
+subRouter.post('/', authorize, createSubscription);
 
-subRouter.put('/:id', (req,res)=>{
-             res.json({message: "Update Subscription"})
-})
+subRouter.put('/:id', authorize, updateSubscription);
 
-subRouter.delete('/:id', (req,res)=>{
-             res.json({message: "Delete Subscription"})
-})
+subRouter.delete('/:id', authorize, deleteSubscription);    
 
 // the subscription for the specific user
 subRouter.get('/user/:id', (req,res)=>{

@@ -57,8 +57,9 @@ const signUp = async (req, res, next)=>{
 
 const signIn = async (req, res, next)=>{
     
-    // placeholder implementation until fully built
+   
   try{
+    
     const { email, password } = req.body;
 
   const user = await User.findOne({ email });

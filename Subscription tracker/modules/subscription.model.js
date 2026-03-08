@@ -29,6 +29,7 @@ const subscriptionSchema = new mongoose.Schema({
         type: String,
         enum: ['daily', 'weekly', 'monthly', 'yearly'],
     },
+    
     category: {
         type: String,
         enum: ['sport', 'news', 'entertainment', 'lifestyle', 'technology', 'finance', 'politics', 'other'],
@@ -98,6 +99,6 @@ subscriptionSchema.pre('save', function(next){
   next();
 })
 
-const subscription = mongoose.model('Subscription', subscriptionSchema);
+const Subscription = mongoose.model('Subscription', subscriptionSchema);
 
-module.exports = subscription;
+module.exports = Subscription;
