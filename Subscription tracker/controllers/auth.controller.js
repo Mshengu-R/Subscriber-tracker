@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../modules/user.models');
 const bcrypt = require('bcrypt');
 
-
+// POST /api/v1/users - create a new user
 const signUp = async (req, res, next)=>{
     //sign up logic
     
@@ -55,6 +55,7 @@ const signUp = async (req, res, next)=>{
     }
 }
 
+// POST /api/v1/users/signin - sign in a user
 const signIn = async (req, res, next)=>{
     
    
@@ -83,7 +84,7 @@ const signIn = async (req, res, next)=>{
 
     res.status(200).json({
         success: true,
-        message: 'User signned in successfully',
+        message: 'User signed in successfully',
         data: {
             token,
             user
@@ -104,6 +105,9 @@ const signOut = async (req, res, next)=>{
     // placeholder implementation until fully built
     res.status(501).json({ success: false, message: 'signOut not implemented yet' });
 }
+
+
+
 
 module.exports = {
     signIn,

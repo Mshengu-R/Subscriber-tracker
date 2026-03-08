@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const { JWT_SECRET } = require('../config/env');
 // controller for user-related endpoints
 
-// POST /api/v1/users - create a new user
+
 const createUser = async (req, res, next) => {
 
     try{
