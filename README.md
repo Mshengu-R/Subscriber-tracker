@@ -19,7 +19,7 @@
 
 
 # Features
-- Use JWT for safe authentications
+- Use JWT for safe authentications (Soon to use https for safe fetching)
 - Mongodb and mongoose for database
 - Intergrate with ORS
 - Use crud operations
