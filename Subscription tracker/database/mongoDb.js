@@ -1,11 +1,11 @@
-// the 
 const mongoose = require('mongoose');
 const {DB_URI, NODE_ENV } = require('../config/env');
 
-
+// when database string not available
 if(!DB_URI){
-    
-    throw new Error('Please define the MONGODB_URI environment variable inside .env.<development/production>.local');
+
+    const message = 'Please define the MONGODB_URI environment variable inside .env.<development/production>.local';
+    throw new Error(message);
 
 }
 
@@ -18,7 +18,8 @@ const connectToDatabase = async ()=>{
         console.log(`Connected to database in ${NODE_ENV} mode`);
     
     }catch(error){
-    
+
+        // if an error occurs while trying to connect to the database throw the error and exist
         console.error('Error connecting to the database:', error);
         process.exit(1);
     }
