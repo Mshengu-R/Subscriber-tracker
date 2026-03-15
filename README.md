@@ -97,3 +97,5 @@ Subscription endpoints  ->  Soon to impliment Graph QL for proper API queries an
 - frequency ( for )
 - category
 
+## WORKFLOWS 
+- for reminding the user about the renewal of the subscription
