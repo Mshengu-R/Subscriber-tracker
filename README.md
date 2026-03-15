@@ -46,6 +46,23 @@
 - services for business logic
 - Arcjet for rate limitting
 
+## Endpoints (RESTFUL API)
+Auth endpoints
+- for SignUp -> POST /api/v1/auth/sign-up
+- for SignIn -> POST /api/v1/auth/sign-in
+- for SignOut -> POST /api/v1/auth/sign-out
+
+User endpoints
+- for updating the user profile -> PUT /api/v1/users/
+- for getting the users -> GET /api/v1/users/:id/update
+- for deleting user -> POST /api/v1/users/:id/delete
+
+Subscription endpoints  ->  Soon to impliment Graph QL for proper API queries and mutations
+- for listing all the subscriptions -> GET /api/v1/subscriptions
+- for creating the subscription -> GET /api/v1/subscriptions
+- for updating the subscription -> PUT /api/v1/subscriptions/:id
+- for deleting the subscription -> DELETE /api/v1/subscriptions/:id
+
  ## Models Use schema for defining how/what our data should looklike
 - Schema objects
 1 User schema
