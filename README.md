@@ -61,8 +61,8 @@ Auth endpoints
 - for SignOut -> POST /api/v1/auth/sign-out
 
 User endpoints
-- for updating the user profile -> PUT /api/v1/users/
-- for getting the users -> GET /api/v1/users/:id/update
+- for getting the user profile -> PUT /api/v1/users/:id
+- for updating the users -> GET /api/v1/users/:id/update
 - for deleting user -> POST /api/v1/users/:id/delete
 
 Subscription endpoints  ->  Soon to impliment Graph QL for proper API queries and mutations
