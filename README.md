@@ -1,5 +1,6 @@
 
 # Subscription tracker
+  FOR COMPANIES SUCH AS NETFLIX WHICH HAS MANAGES SUBSCRIPTIONS AND USERS
 - Handles real logic
 - real Money
 
@@ -34,8 +35,15 @@
 # Deployment
 - Render
 
-## Best uses
-- Api naming, use nouns in plural
+## ADMINS (Yet to be implimented)
+- Admins - they can access everything include checking mangersa and user activities
+  also they can choose what to store in the database for the users
+  Suspend / deactivate accounts
+  
+- Managers - they can access user activities
+
+- users - subscribe and check subscription
+
 
 # Components
 - App.js main file for running the server
