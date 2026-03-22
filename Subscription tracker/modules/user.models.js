@@ -36,8 +36,8 @@ const userSchema = new mongoose.Schema({
       type: Number,
       required: true,
       // enum: ['+27', '+15', ]  // this is for making it to have those values from countries
-      minLength: [10, 'South African number should at least be 10 numbers'],
-      maxLength: [10, 'South African number should at least be 10 numbers'],
+      length: [10, 'South African number should at least be 10 numbers'],
+     
     },
 
   password: {
