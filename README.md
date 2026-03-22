@@ -1,6 +1,5 @@
 
 # Subscription tracker
-  FOR COMPANIES SUCH AS NETFLIX WHICH HAS MANAGES SUBSCRIPTIONS AND USERS
 - Handles real logic
 - real Money
 
