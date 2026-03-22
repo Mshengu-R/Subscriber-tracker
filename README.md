@@ -31,8 +31,8 @@
 - Input validation
 - And middleware intergration implimenting loggin mechanism for better debugging and maintanance
 
-# hosting
-- VPS, e.g hostinger
+# Deployment
+- Render
 
 ## Best uses
 - Api naming, use nouns in plural
