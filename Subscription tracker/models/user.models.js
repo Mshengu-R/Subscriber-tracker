@@ -44,11 +44,16 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'User Password is required'],
     minLength: 6,
-    }
+    },
 
-  
+  role: {
+    type: String,
+     required: [true, "User role is required"],
+     enum: ["admin", "customer", "manager"]
+}
 
-}, {timestamps: true});
+// created timestamp... etc
+}, { timestamps: true });
 
 const User = mongoose.model('User', userSchema);
 
