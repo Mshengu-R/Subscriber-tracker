@@ -47,5 +47,5 @@ app.listen(PORT, async ()=> { console.log(`Server for subscription tracker is ru
 module.exports = app;
 
 /////////////////////////////////////////////////////////////////
-//# copyright 2024 subscription tracker API, all rights reserved. Developed and maintained by I Risima Chabalala
+//# copyright 2026 subscription tracker API, all rights reserved. Developed and maintained by I Risima Chabalala
 /////////////////////////////////////////////////////////////////
