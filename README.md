@@ -1,5 +1,5 @@
 
-# Subscription tracker
+# Subscription Management System
 - Handles real logic
 - real Money
 
