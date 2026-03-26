@@ -34,7 +34,7 @@
 # Deployment
 - Render
 
-## ROLES (Yet to be implimented)
+## ROLES (Yet to be fully implimented)
 - Admins - they can access everything include checking mangersa and user activities
   also they can choose what to store in the database for the users
   Suspend / deactivate accounts
