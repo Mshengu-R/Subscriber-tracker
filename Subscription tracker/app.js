@@ -36,12 +36,14 @@ app.get('/', (req, res)=>{
   res.send(' Welcome to the subscription tracker API');
 });
 
-
-app.listen(PORT, async ()=> { console.log(`Server for subscription tracker is running on port: ${PORT}`)
+(app.listen(PORT, async ()=> { console.log(`Server for subscription tracker is running on port: ${PORT}`)
   
     // connect to the database when the server starts, if it fails the server will not start
     await connectToDatabase(); 
-})
+                              
+}))() 
+// PLEASE NOTE: I just updated it here on github to have this self invoking functions if it doesnt work remove them.
+// Which means I did not really test them to check if they work
 
 
 module.exports = app;
