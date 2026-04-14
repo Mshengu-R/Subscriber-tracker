@@ -106,3 +106,7 @@ Subscription endpoints  ->  Soon to impliment Graph QL for proper API queries an
 
 ## WORKFLOWS 
 - for reminding the user about the renewal of the subscription
+
+## Testing
+- Can use any of Postman, thunder-client and http client etc
+- Using the routes endpoints and api provided above
