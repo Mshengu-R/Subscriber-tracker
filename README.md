@@ -71,6 +71,7 @@ Subscription endpoints  ->  Soon to impliment Graph QL for proper API queries an
 - for creating the subscription -> GET /api/v1/subscriptions
 - for updating the subscription -> PUT /api/v1/subscriptions/:id
 - for deleting the subscription -> DELETE /api/v1/subscriptions/:id
+PUT /api/v1/subscriptions/:id/cancel Authorization: Bearer {token}
 
  ## Models Use schema for defining how/what our data should looklike
 - Schema objects
