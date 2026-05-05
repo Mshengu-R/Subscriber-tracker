@@ -34,8 +34,8 @@
 # Deployment
 - Render
 
-## ROLES (Yet to be fully implimented)
-- Admins - they can access everything include checking mangersa and user activities
+## ROLES
+- Admins - they can access everything include checking mangers and user activities
   also they can choose what to store in the database for the users
   Suspend / deactivate accounts
   
@@ -43,6 +43,8 @@
 
 - users - subscribe and check subscription
 
+# Logging
+- Winston
 
 # Components
 - App.js main file for running the server
