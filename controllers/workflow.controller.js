@@ -1,0 +1,1 @@
+// this is for automated emails, for reminding the users with expiring subscriptions, and for sending newsletters, etc
