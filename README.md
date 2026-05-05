@@ -45,6 +45,7 @@
 
 # Logging
 - Winston
+--> Stored as JSON for easy parsing -> Timestamped for tracking when events occur -> Rotating files (keeps last 5 files, max 5MB each) -> Sanitized (passwords, credit cards, tokens are masked)
 
 # Components
 - App.js main file for running the server
